@@ -36,4 +36,6 @@ chain = RetrievalQA.from_chain_type(
   llm=ChatOpenAI(model="gpt-3.5-turbo"),
   retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
 )
+
+#print query
 print(chain.run(query))
